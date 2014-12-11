@@ -13,7 +13,10 @@
       %li Putting our Employees first
       %li Putting our Employees first
       %li Putting our Employees first
-  %ul.medium-block-grid-3.small-block-grid-1
-    - @next_three.each do |entry|
-      %li
+.row
+  %hr
+- @documents.each_slice(3) do |row|
+  .row
+    - row.each do |entry|
+      .small-12.medium-4.columns
         = render 'small', blog: entry, chars: 100

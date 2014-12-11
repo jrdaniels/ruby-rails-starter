@@ -16,7 +16,7 @@ class ApplicationController < ActionController::Base
                     .orderings('[my.blog.date desc]')
                     .submit(ref)
     @main_entry = @documents.first
-    @next_three = @documents[1..3]
+    @documents = @documents[1..7]
   end
 
   # Single-document page action: mostly, setting the @document instance variable, and checking the URL
