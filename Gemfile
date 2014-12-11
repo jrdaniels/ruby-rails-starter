@@ -53,4 +53,7 @@ end
 
 gem 'rails_12factor', group: :production
 
-ruby '2.1.1'
+ruby '2.1.4'
+
+gem 'haml-rails'
+gem 'foundation-rails'

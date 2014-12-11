@@ -13,7 +13,10 @@ class ApplicationController < ActionController::Base
     @documents = api.form("everything")
                     .page(params[:page] ? params[:page] : "1")
                     .page_size(params[:page_size] ? params[:page_size] : "20")
+                    .orderings('[my.blog.date desc]')
                     .submit(ref)
+    @main_entry = @documents.first
+    @next_three = @documents[1..3]
   end
 
   # Single-document page action: mostly, setting the @document instance variable, and checking the URL

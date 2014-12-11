@@ -1,0 +1,9 @@
+.row
+  .small-12.columns
+    =image_tag blog['blog.image'].main.url, width: 200, height: 200
+.row
+  .small-12.columns
+    %h6.subheader= blog['blog.date'].value.strftime("%B %d, %Y")
+.row
+  .small-12.columns
+    %h4= link_to blog['blog.title'].value, link_resolver().link_to(blog)

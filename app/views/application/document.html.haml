@@ -1,0 +1,24 @@
+.row
+  .small-12.medium-9.columns
+    .row
+      .small-12.columns
+        %h1= @document['blog.title'].value
+      .small-12.columns
+        %h6.subheader= @document['blog.date'].value.strftime("%B %d, %Y")
+      .small-12.columms
+        %img{'data-interchange' => "[#{@document['blog.image'].views['mobile'].url}, (default)], [#{@document['blog.image'].views['tablet'].url}, (medium)],[#{@document['blog.image'].main.url}, (large)]"}
+      .small-12.columns
+        = @document['blog.body'].as_html_safe(link_resolver)
+
+  .small-12.medium-3.columns
+    %h4 About Us
+    %p We want to be special, different, and to offer a retail experience unlike any other.  Our blog is a place to share more about the way that we do business.
+    %h4 Our Values
+    %ul
+      %li Putting our Employees first
+      %li Putting our Employees first
+      %li Putting our Employees first
+      %li Putting our Employees first
+      %li Putting our Employees first
+      %li Putting our Employees first
+      %li Putting our Employees first

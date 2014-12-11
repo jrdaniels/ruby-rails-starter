@@ -2,22 +2,33 @@
 <html>
 <head>
   <title>StarterRubyRails</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<header>
-  <a href="/">
-    <h1>Your prismic.io project</h1>
-  </a>
+<header class="row">
+  <div class="hide-for-small-only medium-4 columns" style="margin-top: 35px;">
+    <div class="text-center">Menu</div>
+  </div>
+  <div class="small-12 medium-4 columns">
+    <div class="text-center">
+    <%= image_tag('Logos_2.png') %></div>
+  </div>
+  <div class="hide-for-small-only medium-4 columns" style="margin-top: 35px;">
+    <div class="text-center">Search</div>
+  </div>
 </header>
+<div class="row"><hr></div>
+
 
 <%= yield %>
 
 <% # This file is required for Experiments and Previews. %>
 <script src="//static.cdn.prismic.io/prismic.min.js"></script>
+<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+
 <% # You can safely remove this block if you don't use experiments - your Google Analytics block should be before this tag %>
 <% render 'partials/experiments', :google_id => @google_id %>
 
