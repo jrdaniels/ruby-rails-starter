@@ -9,6 +9,11 @@
         %img{'data-interchange' => "[#{@document['blog.image'].views['mobile'].url}, (default)], [#{@document['blog.image'].views['tablet'].url}, (medium)],[#{@document['blog.image'].main.url}, (large)]"}
       .small-12.columns
         = @document['blog.body'].as_html_safe(link_resolver)
-
+    .row
+      %hr
+      .small-12.columns
+        -#= render 'livefyre'
+        -#= render 'intense_debate'
+        = render 'discus'
   .small-12.medium-3.columns
     = render 'application/about_us'

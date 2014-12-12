@@ -1,0 +1,17 @@
+%div#livefyre-comments
+  = javascript_include_tag "http://zor.livefyre.com/wjs/v3.0/javascripts/livefyre.js"
+  :javascript
+    (function () {
+      var articleId = fyre.conv.load.makeArticleId(null);
+      fyre.conv.load({}, [{
+        el: 'livefyre-comments',
+        network: "livefyre.com",
+        siteId: "368890",
+        articleId: articleId,
+        signed: false,
+        collectionMeta: {
+          articleId: articleId,
+          url: fyre.conv.load.makeCollectionUrl(),
+        }
+      }], function() {});
+    }());
