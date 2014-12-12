@@ -2,17 +2,7 @@
   .small-12.medium-8.columns
     = render 'main', blog: @main_entry, chars: 400
   .medium-4.small-12.columns
-    %h4 About Us
-    %p We want to be special, different, and to offer a retail experience unlike any other.  Our blog is a place to share more about the way that we do business.
-    %h4 Our Values
-    %ul
-      %li Putting our Employees first
-      %li Putting our Employees first
-      %li Putting our Employees first
-      %li Putting our Employees first
-      %li Putting our Employees first
-      %li Putting our Employees first
-      %li Putting our Employees first
+    = render 'application/about_us'
 .row
   %hr
 - @documents.each_slice(3) do |row|

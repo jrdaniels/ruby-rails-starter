@@ -11,14 +11,4 @@
         = @document['blog.body'].as_html_safe(link_resolver)
 
   .small-12.medium-3.columns
-    %h4 About Us
-    %p We want to be special, different, and to offer a retail experience unlike any other.  Our blog is a place to share more about the way that we do business.
-    %h4 Our Values
-    %ul
-      %li Putting our Employees first
-      %li Putting our Employees first
-      %li Putting our Employees first
-      %li Putting our Employees first
-      %li Putting our Employees first
-      %li Putting our Employees first
-      %li Putting our Employees first
+    = render 'application/about_us'
